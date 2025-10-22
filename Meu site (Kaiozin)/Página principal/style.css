@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-shadow: 0 0 8px blue;
+}
+
+body {
+    background-color: #f4f0ea;
+    font-weight: 400;
+    font-family: "roboto mono", monospace;
+}
+
+header {
+    background-image: url('/imagens/web-crawler-1024x576.jpg');
+    /* Caminho da imagem */
+    background-size: cover;
+    /* Faz a imagem cobrir todo o header */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Não repete a imagem */
+    padding: 50px;
+    /* Exemplo de padding, você pode ajustar */
+    color: rgb(255, 255, 255);
+    /* Para o texto ficar visível se a imagem for escura */
+    text-align: center;
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h2 {
+    color: #331f19;
+    font-size: 1.2rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #ccd595;
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 0, 5rem;
+    border: 2px solid #ccd595;
+    outline: none;
+    border-radius: 5px;
+}
+
+/*IMAGEM DA QUESTÃO 8*/
+.logo-java {
+    width: 200px;
+    height: auto;
+}
+
+/* ====== ANIMAÇÕES DE SCROLL SUAVE ====== */
+
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Começa levemente abaixo */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+/* Quando o elemento entra na tela */
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Quando o elemento sai da tela (fade-out suave) */
+.scroll-fade.hidden {
+    opacity: 0;
+    transform: translateY(-30px);
+    /* Sobe levemente ao sumir */
+}
